@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<main>
+    <h3><span style="color:goldenrod;">HyperLink.in</span> Long  <del>Story</del> URLs Short !</h3>
+
+    <div class="container"> 
+        {% if notValid: %}
+            <p class=".error">URL is not Valid !</p>
+        {% endif %}
+        <form action="/generate" method="post">  
+           
+            <label for="url"> 
+               <span>
+               <i class="fa-solid fa-link fa-2x"></i></span><input type="text" name="url" id="url" placeholder="Enter URL ...(without http://)" autocomplete="off">
+            </label>
+            
+            <input type="submit" value="Generate">
+        </form>
+    </div> 
+
+</main>
+
+{% endblock %}

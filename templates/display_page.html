@@ -1,0 +1,25 @@
+{% extends "base.html" %} 
+
+
+{% block content %}  
+<main> 
+    <h3 class="link-result"><span style="color: goldenrod;">Url Shortened</span> <u>http://{{decoded}}</u></h3>    
+     
+    <div class="container">
+        <div action="/generate" method="post" class="display-container">   
+           
+            <div class="url"> 
+               <span>
+               <i class="fa-solid fa-link fa-2x"></i></span><input type="text" name="url" id="url"  value= "hpv0.herokuapp.com/{{shortenedUrl}}"  placeholder="Enter URL ..." autocomplete="off">
+            </div>
+            
+            <input onclick="myFunction()" type="submit" value="Copy">
+        </form>
+    </div>
+
+
+
+
+
+</main>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "base.html" %} 
+
+
+{% block content %}  
+
+<main> 
+    <h3>404 ! we meet again 😅</h3>
+    <div class="container"> 
+        <img src="{{ url_for('static', filename = '404_face.png') }}" alt="404" class="failure-img">
+        <a href="/" style="text-decoration: none;">Home</a>
+    </div>
+
+</main>
+
+{% endblock %}

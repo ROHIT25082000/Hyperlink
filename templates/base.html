@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+   
+    <link rel="shortcut icon" href="{{ url_for('static', filename='Hyperlink-logos/Hyperlink-logos_white.png')}}" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <title>HyperLink.in</title>
+</head>
+<body>
+    <nav>
+        <a href="/"><img src="{{ url_for('static', filename='Hyperlink-logos/Hyperlink-logos_black.png')}}" alt="logo" class="logo-img"></a>
+        <ul>
+            <li><a href="/">Home</a></li> 
+            <li><a href="#">Contact</a></li>      
+            <li><a href="#">Report URL</a></li>
+        </ul> 
+    </nav>
+
+    {% block content %}
+
+   
+    
+    {% endblock %}
+    <footer>
+
+        <p>Share HyperLink.in on</p>
+        <div class="link-table">
+            <a href="http://www.facebook.com"><i class="fa-brands fa-facebook fa-2x"></i></a>  
+            <a href="http://www.instagram.com"><i class="fa-brands fa-instagram fa-2x"></i></a>
+            <a href="http://www.twitter.com"><i class="fa-brands fa-twitter fa-2x"></i></a>
+            <a href="http://www.linkedin.com"><i class="fa-brands fa-linkedin fa-2x"></i></a>
+        </div>
+        <p>© Copyright Hyperlink 2022</p>
+    </footer>
+    <!-- <h1> URL Shortener </h1>  
+    -->
+    <script src="{{ url_for('static', filename='app.js')}}"></script>
+</body>
+</html>
