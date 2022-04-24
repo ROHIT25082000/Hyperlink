@@ -1,9 +1,12 @@
 import pymongo
 from pymongo.server_api import ServerApi
 
-#myClient = pymongo.MongoClient("mongodb://localhost:27017/")
+myClient = pymongo.MongoClient("mongodb://localhost:27017/")
 
-myClient = pymongo.MongoClient("mongodb+srv://rohitv:12345@cluster0.fbl4f.mongodb.net/urldb?retryWrites=true&w=majority", server_api=ServerApi('1'))
+# if you want to deploy then you can get a mongodb database connection pass in 
+# your credentials  <user> and <password>. 
+# But the link will be different. I'm just sharing the idea. 
+#myClient = pymongo.MongoClient("mongodb+srv://<user>:<password>@cluster0.fbl4f.mongodb.net/urldb?retryWrites=true&w=majority", server_api=ServerApi('1'))
 
 
 dbName = "urldb"
